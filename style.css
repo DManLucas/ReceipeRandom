@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ece9e6;
+  background: -webkit-linear-gradient(to right, #ffffff, #ece9e6);
+  background: linear-gradient(to right, #ffffff, #ece9e6);
+
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.mobile-container {
+  background-color: #fff;
+  width: 400px;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 2px #3333331a;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header input {
+  background-color: #efefef;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  font-family: inherit;
+  border: none;
+}
+
+header button {
+  background-color: transparent;
+  color: #efefef;
+  font-size: 1.4rem;
+  border: none;
+  margin-left: 10px;
+}
+
+.fav-container {
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(243, 225, 225);
+}
+
+.fav-meals {
+  display: flex;
+  overflow: auto;
+  list-style-type: none;
+  padding: 0;
+}
+
+.fav-meals li {
+  position: relative;
+  margin: 5px;
+  width: 85px;
+}
+
+.fav-meals li .clear {
+  background-color: transparent;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  top: -0.2rem;
+  right: -0.2rem;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.fav-meals li:hover .clear {
+  opacity: 1;
+}
+
+.fav-meals li img {
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px 2px #3333331a;
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  max-width: none;
+}
+
+.fav-meals li span {
+  font-size: 0.8rem;
+  display: grid;
+  justify-items: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 80px;
+}
+
+.fav-meals li:hover span {
+  overflow: auto;
+  white-space: normal;
+}
+
+.meal {
+  border-radius: 3px;
+  margin: 1.5rem;
+  box-shadow: 0 0 10px 2px #3333331a;
+  overflow: hidden;
+}
+
+.meal-header {
+  position: relative;
+}
+
+.meal-header .random {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  background-color: #fff;
+  padding: 0.25rem 1.5rem;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.meal-header img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.meal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.meal-body h4 {
+  margin: 0;
+}
+
+.meal-body .fav-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: rgb(197, 188, 188);
+  cursor: pointer;
+}
+
+.meal-body .fav-btn.active {
+  color: rebeccapurple;
+}
